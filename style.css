@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+  --bg-select: hsla(194, 97%, 31%, 1);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#app {
+  display: grid;
+  grid-template-areas: "left right";
+  place-content: center;
+  height: 100vh;
+  gap: 19.2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+#timer {
+  font-size: 12rem;
+}
+
+#controls {
+  margin-top: 4.8rem;
+  gap: 4rem;
+  margin-top: 1.6rem;
+}
+
+/* acessiblidade */
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}
+
+.left {
+  grid-area: left;
+  /* border: 1px solid red; */
+}
+
+#controls button {
+  border: 0;
+  background-color: transparent;
+  font-size: 4.8rem;
+}
+
+.right {
+  grid-area: right;
+  /* border: 1px solid green; */
+}
+
+#themes {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "btn1 btn2"
+    "btn3 btn4";
+  gap: 3.2rem;
+}
+
+#themes button {
+  border: 0;
+  padding: 2.4rem;
+  font-size: 6.4rem;
+  border-radius: 1.2rem;
+}
+
+.selected {
+  background-color: var(--bg-select);
+  color: #fff;
+}
+
+#btn1 {
+  grid-area: btn1;
+}
+
+#btn2 {
+  grid-area: btn2;
+}
+
+#btn3 {
+  grid-area: btn3;
+}
+
+#btn4 {
+  grid-area: btn4;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
+}
